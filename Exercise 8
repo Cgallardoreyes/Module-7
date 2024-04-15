@@ -1,0 +1,38 @@
+//Java class having more than 1 methods having same name but differ in their Argument List
+import java.util.Scanner;
+public class Main
+{  //Method Average()....1
+   public static int average(int[] array){
+         int sum=0;
+         int averaage=0;
+        for(int i=0;i<array.length;i++){
+            sum+=array[i];
+            averaage=sum/10;     
+    }
+        return averaage;
+   }   
+   //Method Average()....2
+    public static double average(double[] array)  { 
+         double sum=0;
+         double average=0;
+      for(int i=0;i<array.length;i++){
+          sum+=array[i];
+        average=sum/10;
+        }
+        return average;
+        }
+  
+  
+  //Main
+	public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+         //Asks for User
+        System.out.print("Enter 10 double numbers :");
+        double []array=new double[10];
+        for (int i=0;i<10;i++){
+            array[i]=input.nextDouble();
+    }
+        System.out.println("The average is "+(average(array)));
+    }
+  
+}
